@@ -1,0 +1,56 @@
+@font-face {
+    font-family: 'TypoRound';
+    src: url('./resources/Typo_Round_Regular.otf') format('opentype');
+}
+
+body, html {
+
+    --color1: #0095d5;
+    --color2: white;
+    --transTime: 3s;
+
+    margin: 0;
+    padding: 0;
+    background-image: url('./resources/img.jpg');
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.featured {
+    
+    animation: invertBack var(--transTime) ease-in-out infinite alternate;
+
+    display: flex;
+    flex-direction: column;
+
+}
+
+.typo {
+    font-family: 'TypoRound';
+    font-size: 12vw;
+    font-weight: 30;
+
+    animation: invertText var(--transTime) ease-in-out infinite alternate;
+    
+    transition: all ease var(--transTime);
+}
+
+.text {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+
+@keyframes invertBack {
+    0% { background-color: var(--color1) }
+    100% { background-color: var(--color2) }
+}
+
+@keyframes invertText {
+    0% { color: var(--color2) }
+    100% { color: var(--color1) }
+}
