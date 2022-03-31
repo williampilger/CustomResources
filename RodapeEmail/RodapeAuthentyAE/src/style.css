@@ -1,0 +1,54 @@
+@font-face {
+    font-family: 'TypoRound';
+    src: url('./resources/Typo_Round_Regular.otf') format('opentype');
+}
+
+:root {
+    --corFundo: white;
+    --corTexto: #0f3c5a;
+}
+
+body, html {
+    margin: 0;
+    padding: 0;
+    background-image: url('./resources/img.jpg');
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+}
+.featured {
+    background-size: cover;
+    background-position: center;
+}
+
+.featured--horizontal {
+    width: inherit;
+    height: inherit;
+    background: linear-gradient(to right, var(--corFundo) 25%, transparent 75%);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-left: 30px;
+}
+
+img {
+    width: 300px;
+}
+
+.text {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.typo {
+    font-family: 'TypoRound';
+    color: var(--corTexto);
+    font-size: 50px;
+}
+
+.nome {
+    font-family: serif;
+    color: var(--corTexto);
+    font-size: 18px;
+}
