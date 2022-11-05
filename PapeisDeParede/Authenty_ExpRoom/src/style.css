@@ -1,5 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400&display=swap');
 
+@font-face {
+    font-family: 'Bas Relief';
+    src: url('BasRelief.ttf') format('truetype');
+}
+
 html, body{
     margin: 0;
     padding: 0;
@@ -14,26 +19,31 @@ html, body{
     background-image: url('vecteezy_laser-background-futuristic-horizon-background-technology_6878140_918.jpg');
     background-size: cover;
     background-position: center;
-
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    position: relative;
 }
 
-.fundo .center{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-
-.fundo .center img{
+.fundo img{
+    position: absolute;
+    bottom: 28%;
+    left: 50%;
+    transform: translateX(-50%);
     height: 200px;
-    filter: drop-shadow( 0 0 10px #43bffde9)
+    filter: drop-shadow( 0 0 10px #43bffde9);
 }
 
-.fundo .center span{
-    margin: 80px 0px;
+.fundo .span{
+    position: absolute;
+    top: 32%;
+    left: 44%;
+    transform: translateX(-50%);
+    font-family: 'Bas Relief';
+    font-size: 22px;
+    /* font-weight: bold; */
+    color: #1c2d44;
+
+}
+
+.fundo .span .tax{
+    font-weight: bold;
     font-size: 30px;
-    color: rgb(222, 221, 221)
 }
